@@ -40,7 +40,14 @@ jobs:
         with:
           name: github-actions-artifact
           path: staging
-        
+
+      - uses: github/codeql-action/init@v2
+        with:
+          languages: java-kotlin,javascript-typescript,python
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+
 
 
           
